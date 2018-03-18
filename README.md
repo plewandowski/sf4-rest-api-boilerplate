@@ -32,11 +32,6 @@ JWT_PASSPHRASE=657f71ad85bd9638746f070edfde13ed
 JWT_TOKEN_TTL=3600
 ```` 
 
-Create database schema
-````
-php bin/console doctrine:schema:create
-````
-
 ### Production
 For production use system environment variables instead of .env  
 
@@ -48,6 +43,13 @@ Create private key
 
 Create public key  
 `openssl rsa -pubout -in var/config/jwt/private.pem -out var/config/jwt/public.pem`
+
+## Database schema setup
+
+Create database schema
+````
+php bin/console doctrine:schema:create
+````
 
 ## Test API users
 There is not a default test user for security reasons. Test user(s) can be easily created with FOSUser bundle command:  
