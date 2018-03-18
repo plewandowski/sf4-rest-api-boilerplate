@@ -32,6 +32,11 @@ JWT_PASSPHRASE=657f71ad85bd9638746f070edfde13ed
 JWT_TOKEN_TTL=3600
 ```` 
 
+Create database schema
+````
+php bin/console doctrine:schema:create
+````
+
 ### Production
 For production use system environment variables instead of .env  
 
