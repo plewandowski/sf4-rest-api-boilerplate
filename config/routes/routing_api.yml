@@ -1,0 +1,9 @@
+login:
+    type: rest
+    resource: App\Controller\ApiLoginController
+    prefix: /api
+
+books:
+    type: rest
+    resource: App\Controller\BooksController
+    prefix: /api/{version}

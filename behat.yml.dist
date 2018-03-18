@@ -1,0 +1,25 @@
+default:
+    suites:
+        default:
+            contexts:
+                - FeatureContext:
+                    kernel: '@kernel'
+                    doctrine: '@doctrine'
+
+                - RestUserContext:
+                    userManager: "@fos_user.user_manager"
+                    em: "@doctrine.orm.entity_manager"
+
+                - BookContext:
+                    em: "@doctrine.orm.entity_manager"
+
+                - RestApiContext:
+                    kernel: '@kernel'
+
+    extensions:
+        Behat\Symfony2Extension:
+            kernel:
+                bootstrap: features/bootstrap/bootstrap.php
+                class: App\Kernel
+                env: "test"
+                debug: "true"

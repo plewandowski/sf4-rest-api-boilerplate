@@ -1,0 +1,21 @@
+fos_rest:
+    body_listener: true
+    versioning: true
+    param_fetcher_listener: force
+    format_listener:
+        enabled: true
+        rules:
+            - { path: ^/api, priorities: [ json ], fallback_format: json, prefer_extension: true }
+    view:
+        view_response_listener: 'force'
+        formats:
+            json: true
+            xml: false
+            rss: false
+        mime_types:
+            json: ['application/json', 'application/x-json']
+    routing_loader:
+        default_format:  json
+        include_format:  false
+    exception:
+        enabled: true

@@ -1,0 +1,17 @@
+nelmio_api_doc:
+    documentation:
+        info:
+            title: Rest app boilerplate
+            description: This is an awesome app!
+            version: 1.0.0
+#        security_definitions:
+#            api_key:
+#                type: apiKey
+#                name: api_key
+#                in: header
+#        security:
+#            api_key: []
+
+    routes:
+        path_patterns:
+            - ^/api(?!/doc$) # Accepts routes under /api except /api/doc
